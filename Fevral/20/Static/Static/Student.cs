@@ -9,7 +9,7 @@ namespace Static
 {
     public class Student
     {
-        private static ArrayList Database { get; set; }
+        private static ArrayList Database;
 
         public string Name { get; set; }
         public string Surname { get; set; }
