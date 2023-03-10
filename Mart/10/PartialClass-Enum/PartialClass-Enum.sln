@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33026.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialClass-Enum", "PartialClass-Enum\PartialClass-Enum.csproj", "{93C915C7-055D-4A54-9A0E-A9947F83BB31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework", "Homework\Homework.csproj", "{4C8F2D47-3D56-4719-AA02-CFA97024A91E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93C915C7-055D-4A54-9A0E-A9947F83BB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93C915C7-055D-4A54-9A0E-A9947F83BB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93C915C7-055D-4A54-9A0E-A9947F83BB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93C915C7-055D-4A54-9A0E-A9947F83BB31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C8F2D47-3D56-4719-AA02-CFA97024A91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C8F2D47-3D56-4719-AA02-CFA97024A91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C8F2D47-3D56-4719-AA02-CFA97024A91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C8F2D47-3D56-4719-AA02-CFA97024A91E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FB3618D-0843-4B01-9C25-6C81967E04B6}
+	EndGlobalSection
+EndGlobal
