@@ -96,6 +96,124 @@ namespace Linq
                                select a)
                                .Count();
             #endregion
+
+
+
+            #region Practise Linq
+            IEnumerable<Customer> query1 = ds.Customers.Where(m => m.Country.ToLower().Contains("b") && m.City.ToLower().StartsWith("c"));
+            
+            IEnumerable<Customer> query2 = ds.Customers.Where(m => m.City.ToLower().StartsWith("a") && m.City.ToLower().EndsWith("e"));
+
+            List<Customer> customers = ds.Customers.Where(m => m.Name == "Jack").ToList();
+
+            Customer customer = ds.Customers.FirstOrDefault(m => m.Phone == "0555555555");
+
+            var query3 = ds.Customers.Where(m => m.DateOfBirth.Year == 1990).ToList();
+
+            var query4 = ds.Customers.Where(m => m.DateOfBirth.Month == 12).Take(2).ToList();
+            #endregion
+
+
+            #region Func Delegate
+            var q1 = ds.Customers.Where(m => m.Email.ToLower().StartsWith("a"));
+            //------------
+            bool StartsWithA(Customer m)
+            {
+                if (m.Email[0] == 'A')
+                    return true;
+                else
+                    return false;
+            }
+
+            Func<Customer, bool> startsWithA_delegete = new Func<Customer, bool>(StartsWithA);
+
+            var q2 = ds.Customers.Where(startsWithA_delegete);
+            //------------
+            var q3 = ds.Customers.Where(new Func<Customer, bool>(StartsWithA));
+            //------------
+            var q4 = ds.Customers.Where(delegate (Customer m) {
+                if (m.Email[0] == 'A')
+                    return true;
+                else
+                    return false;
+            });
+            //------------
+            var q5 = ds.Customers.Where((Customer m) => {
+                if (m.Email[0] == 'A')
+                    return true;
+                else
+                    return false;
+            });
+            //------------
+            var q6 = ds.Customers.Where((m) => {
+                if (m.Email[0] == 'A')
+                    return true;
+                else
+                    return false;
+            });
+
+            var q7 = ds.Customers.Where(m => m.Email[0] == 'A');
+            #endregion
+
+
+            #region Predicate Delegate
+            var p1 = ds.Customers.FindAll(m => m.Country == "Azerbaijan" && m.DateOfBirth > new DateTime(1990, 12, 12));
+
+            //Long version
+            bool predicateDelegateMethod(Customer m)
+            {
+                if (m.Country == "Azerbaijan" && m.DateOfBirth > new DateTime(1990, 12, 12))
+                    return true;
+                else
+                    return false;
+            }
+
+            Predicate<Customer> predicate = new Predicate<Customer>(predicateDelegateMethod);
+
+            var delegate1 = ds.Customers.FindAll(predicate);
+
+            //Short versions
+
+            var delegate2 = ds.Customers.FindAll(new Predicate<Customer>(predicateDelegateMethod));
+
+            var delegate3 = ds.Customers.FindAll(delegate (Customer m) { return m.Country == "Azerbaijan" && m.DateOfBirth > new DateTime(1990, 12, 12); });
+
+            var delegate4 = ds.Customers.FindAll((Customer m) => m.Country == "Azerbaijan" && m.DateOfBirth > new DateTime(1990, 12, 12));
+
+            var delegate5 = ds.Customers.FindAll((m) => m.Country == "Azerbaijan" && m.DateOfBirth > new DateTime(1990, 12, 12));
+
+            var delegateLambda = ds.Customers.FindAll(m => m.Country == "Azerbaijan" && m.DateOfBirth > new DateTime(1990, 12, 12));
+            #endregion
+
+            #region Action Delegate
+            foreach (var item in ds.Customers)
+            {
+                Console.WriteLine($"{item.Name} {item.Surname} is {item.Age} years old.");
+            }
+
+            ds.Customers.ForEach(m => Console.WriteLine($"{m.Name} {m.Surname} is {m.Age} years old."));
+
+            //Long version
+            void ShowCustomerInfo(Customer m)
+            {
+                Console.WriteLine($"{m.Name} {m.Surname} is {m.Age} years old.");
+            }
+
+            Action<Customer> action = new Action<Customer>(ShowCustomerInfo);
+
+            ds.Customers.ForEach(action);
+
+            //Short version
+            ds.Customers.ForEach(new Action<Customer>(ShowCustomerInfo));
+
+            ds.Customers.ForEach(delegate (Customer m) { Console.WriteLine($"{m.Name} {m.Surname} is {m.Age} years old."); });
+
+            ds.Customers.ForEach((Customer m) => Console.WriteLine($"{m.Name} {m.Surname} is {m.Age} years old."));
+
+            ds.Customers.ForEach((m) => Console.WriteLine($"{m.Name} {m.Surname} is {m.Age} years old."));
+
+            ds.Customers.ForEach(m => Console.WriteLine($"{m.Name} {m.Surname} is {m.Age} years old."));
+            #endregion
         }
     }
 }
