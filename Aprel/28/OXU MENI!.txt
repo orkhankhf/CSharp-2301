@@ -1,0 +1,2 @@
+Zehmet olmasa dersin videosunu izleyin ve Ms SQL Server, SSMS install edin.
+Sonra ise AdventureWorks2017 ve ya 2019 database'i yukleyib restore edin. Ders videosunda hamisi etrafli var.
