@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Müştəri məlumatları -->
+<Customers>
+
+  <Customer Id="1">
+    <Name>Orkhan</Name>
+    <Surname>Farajov</Surname>
+    <Job>Programmer</Job>
+    <Country>Azerbaijan</Country>
+  </Customer>
+
+  <Customer Id="2">
+    <Name>Nihad</Name>
+    <Surname>Asadov</Surname>
+    <Job>Doctor</Job>
+    <Country>Turkey</Country>
+  </Customer>
+
+</Customers>
+
+<!--
+  1. Xdocument
+  2. Xdeclaretion
+  3. Xcomment
+  4. Xelement
+  5. Xattribute   
+-->
