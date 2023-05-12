@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.33026.149
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON and CSV", "JSON and CSV\JSON and CSV.csproj", "{24904DA9-74D6-4934-A917-5EF09F82D7D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSV", "CSV\CSV.csproj", "{3EF2CC95-7B00-49A9-B204-9EDBB4E07BD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homeworks", "Homeworks\Homeworks.csproj", "{2BD22F50-7858-4DBE-8F23-0CBF15B2486B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24904DA9-74D6-4934-A917-5EF09F82D7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24904DA9-74D6-4934-A917-5EF09F82D7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24904DA9-74D6-4934-A917-5EF09F82D7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24904DA9-74D6-4934-A917-5EF09F82D7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EF2CC95-7B00-49A9-B204-9EDBB4E07BD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EF2CC95-7B00-49A9-B204-9EDBB4E07BD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EF2CC95-7B00-49A9-B204-9EDBB4E07BD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EF2CC95-7B00-49A9-B204-9EDBB4E07BD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BD22F50-7858-4DBE-8F23-0CBF15B2486B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD22F50-7858-4DBE-8F23-0CBF15B2486B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD22F50-7858-4DBE-8F23-0CBF15B2486B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD22F50-7858-4DBE-8F23-0CBF15B2486B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AD1DA67-F5D8-4FF4-903D-866857B6E91E}
+	EndGlobalSection
+EndGlobal
