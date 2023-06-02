@@ -1,8 +1,11 @@
 using EduSys.Core.Repositories;
+using EduSys.Core.Services;
 using EduSys.Core.UnitOfWorks;
 using EduSys.Repository;
 using EduSys.Repository.Repositories;
 using EduSys.Repository.UnitOfWorks;
+using EduSys.Service.Mapping;
+using EduSys.Service.Services;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -17,6 +20,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+builder.Services.AddAutoMapper(typeof(MapProfile));
+
+builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 
 builder.Services.AddDbContext<AppDbContext>(x =>
 {
