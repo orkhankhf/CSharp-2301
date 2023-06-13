@@ -17,7 +17,8 @@ namespace EduSys.Service.Mapping
             CreateMap<ProductFeature, ProductFeatureDto>().ReverseMap();
             CreateMap<ProductUpdateDto, Product>().ReverseMap();
             CreateMap<Product, ProductWithCategoryDto>().ReverseMap();
-            
+            CreateMap<Category, CategoryWithProductsDto>().ReverseMap();
+
         }
     }
 }
