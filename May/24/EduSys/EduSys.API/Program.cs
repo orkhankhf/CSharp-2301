@@ -1,5 +1,8 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using EduSys.API.Filters;
 using EduSys.API.Middlewares;
+using EduSys.API.Modules;
 using EduSys.Core.Repositories;
 using EduSys.Core.Services;
 using EduSys.Core.UnitOfWorks;
@@ -33,18 +36,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped(typeof(NotFoundFilter<>));
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
 builder.Services.AddAutoMapper(typeof(MapProfile));
-
-builder.Services.AddScoped(typeof(IProductService), typeof(ProductService));
-builder.Services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
-
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-
-builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 
 builder.Services.AddDbContext<AppDbContext>(x =>
 {
@@ -53,6 +45,9 @@ builder.Services.AddDbContext<AppDbContext>(x =>
         option.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
     });
 });
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
 
 var app = builder.Build();
 
