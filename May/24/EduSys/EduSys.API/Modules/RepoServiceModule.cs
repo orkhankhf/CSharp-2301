@@ -9,6 +9,7 @@ using EduSys.Repository.Repositories;
 using EduSys.Core.Repositories;
 using EduSys.Service.Services;
 using EduSys.Core.Services;
+using EduSys.Caching;
 
 namespace EduSys.API.Modules
 {
@@ -31,6 +32,8 @@ namespace EduSys.API.Modules
                 .Where(x => x.Name.EndsWith("Service"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<ProductServiceWithCaching>().As<IProductService>();
 
             builder.RegisterGeneric(typeof(GenericRepository<>))
                 .As(typeof(IGenericRepository<>))

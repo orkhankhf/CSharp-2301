@@ -77,7 +77,7 @@ namespace EduSys.API.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> GetProductWithCategory()
         {
-            var productsWithCategory = await _service.GetProductWithCategory();
+            var productsWithCategory = await _service.GetProductsWithCategory();
 
             return CreateActionResult(productsWithCategory);
         }
