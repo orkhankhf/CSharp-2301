@@ -3,17 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSys.Core", "EduSys.Core\EduSys.Core.csproj", "{B3FEF4BE-DCEF-4D3F-9228-0E1750C3D82A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.Core", "EduSys.Core\EduSys.Core.csproj", "{B3FEF4BE-DCEF-4D3F-9228-0E1750C3D82A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSys.Repository", "EduSys.Repository\EduSys.Repository.csproj", "{39DE1EBD-FE11-4748-BABA-EA6080E01961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.Repository", "EduSys.Repository\EduSys.Repository.csproj", "{39DE1EBD-FE11-4748-BABA-EA6080E01961}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSys.Service", "EduSys.Service\EduSys.Service.csproj", "{ABBAD905-F49C-4C2A-B6D2-6026AEDDCC12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.Service", "EduSys.Service\EduSys.Service.csproj", "{ABBAD905-F49C-4C2A-B6D2-6026AEDDCC12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSys.API", "EduSys.API\EduSys.API.csproj", "{328B2B6E-BFA9-4D49-9DCD-5A489B3A3DF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.API", "EduSys.API\EduSys.API.csproj", "{328B2B6E-BFA9-4D49-9DCD-5A489B3A3DF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSys.Web", "EduSys.Web\EduSys.Web.csproj", "{9F079576-E044-4E4C-94A0-BD253B86B3E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.Web", "EduSys.Web\EduSys.Web.csproj", "{9F079576-E044-4E4C-94A0-BD253B86B3E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduSys.Caching", "EduSys.Caching\EduSys.Caching.csproj", "{21330D60-F409-4492-B169-1DCABA0626D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduSys.Caching", "EduSys.Caching\EduSys.Caching.csproj", "{21330D60-F409-4492-B169-1DCABA0626D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DD83957A-3AB2-4B7D-8C2F-FE411F346D4B}"
+	ProjectSection(SolutionItems) = preProject
+		ports.txt = ports.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

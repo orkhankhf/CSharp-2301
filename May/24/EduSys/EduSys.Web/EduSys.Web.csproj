@@ -16,4 +16,8 @@
     <ProjectReference Include="..\EduSys.Service\EduSys.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

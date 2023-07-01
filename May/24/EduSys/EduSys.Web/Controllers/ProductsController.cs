@@ -2,6 +2,7 @@
 using EduSys.Core.DTOs;
 using EduSys.Core.Models;
 using EduSys.Core.Services;
+using EduSys.Web.Filters;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -22,7 +23,7 @@ namespace EduSys.Web.Controllers
         
         public async Task<IActionResult> Index()
         {
-            return View(await _services.GetProductsWithCategory());
+            return View((await _services.GetProductsWithCategory()).Data);
         }
 
         public async Task<IActionResult> Save()
@@ -54,6 +55,7 @@ namespace EduSys.Web.Controllers
             return View();
         }
 
+        [ServiceFilter(typeof(NotFoundFilter<Product>))]
         public async Task<IActionResult> Update(int id)
         {
             var product = await _services.GetByIdAsync(id);
